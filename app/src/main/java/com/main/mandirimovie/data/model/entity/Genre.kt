@@ -1,6 +1,11 @@
 package com.main.mandirimovie.data.model.entity
 
-data class Genre (
+import com.google.gson.annotations.SerializedName
 
-    var id:Int,
+data class Genre (
+    @SerializedName("id")
+    var id: Int,
+
+    @SerializedName("name")
+    var name: String,
 )
