@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="review"
+            type="com.main.mandirimovie.data.model.entity.Review" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp">
+
+
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingTop="6dp"
+            android:text="@{review.author}"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/contentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingTop="6dp"
+            android:text="@{review.content}"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/authorText"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Content Review" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
